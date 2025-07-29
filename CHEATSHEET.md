@@ -33,7 +33,7 @@ A beginner-friendly guide to commonly used Kubernetes commands for managing pods
 - `kubectl get services --all-namespaces`: list services across all namespaces
 - `kubectl describe endpoints <endpoints-name>`: show detailed information about a specific endpoints
 - `kubectl get services -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}'`: list the names of all services in jsonpath format
-- `kubectl get services -o jsonpath='{.items[*].spec.ports[*].name}'`: list the ports name of all services in jsonpath foat
+- `kubectl get services -o jsonpath='{.items[*].spec.ports[*].name}'`: list the ports name of all services in jsonpath format
 - `kubectl get services -o jsonpath='{.items[*].spec.ports[*].port}'`: list the ports number of all services in jsonpath format
 
 ## Deployment Management
