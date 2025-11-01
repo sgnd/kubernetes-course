@@ -1,13 +1,24 @@
-# Kubernetes Resources: Cheatsheet and Interview Questions
-This repository contains a Kubernetes cheatsheet and a list of Kubernetes interview questions to help you learn and review Kubernetes concepts.
+# Kubernetes Resources: Cheatsheet & Interview Questions
 
-## Welcome to the Kubernetes Resources repository!
-Here, you'll find a Kubernetes cheatsheet and a list of Kubernetes interview questions to help you learn and review Kubernetes concepts.
+A compact, practical collection of Kubernetes study resources: a hands-on cheatsheet of common `kubectl` workflows and an organized set of interview questions to guide your learning and review.
 
-The [Kubernetes cheatsheet](CHEATSHEET.md) is a quick reference for the most commonly used Kubernetes commands. It covers a range of topics, including Kubernetes basics, pod and service management, deployment management, networking, and more. The commands are organized by category and include explanations and examples to help you understand how to use them.
+Contents
+- `CHEATSHEET.md` — Quick `kubectl` commands grouped by workflow with examples and tips.
+- `INTERVIEW.md` — Topic-organized interview questions from fundamentals to advanced topics.
+- `LICENSE` — Project license.
 
-The list of [Kubernetes interview questions](INTERVIEW.md) is a comprehensive guide to preparing for a technical interview on Kubernetes. It covers a wide range of topics, from basic Kubernetes concepts to advanced features and best practices for using Kubernetes in a professional setting. The questions are organized by category and ordered by difficulty, making it easy to focus on the topics that are most important for your interview.
+Get started
+1. Open `CHEATSHEET.md` and try the commands on a lab cluster (kind, minikube, or a managed sandbox).
+2. Use `INTERVIEW.md` to structure mock interviews or convert questions into flashcards.
 
-We hope these resources are helpful to you as you learn and review Kubernetes concepts. If you have any questions or suggestions, please feel free to open an issue or pull request in this repository.
+How to contribute
+- Found an error or want to add commands/questions? Please open a Pull Request. Include a short rationale and an example use-case for new entries.
+- Keep entries concise and prefer commands that work with modern Kubernetes versions (1.20+).
 
-Thank you for visiting!
+Notes & tips
+- Use `kubectl explain <resource>` to learn object fields.
+- For scripting and automation, prefer `-o jsonpath` or `-o json` for machine-parsable output.
+- Consider converting long command sequences into small helper scripts or `kubectl` plugins.
+
+License
+This project is licensed under the MIT License. See `LICENSE` for details.

@@ -1,73 +1,58 @@
-## Cluster Components and Architecture
 
-- What is Kubernetes and what are its main features?
-- How does Kubernetes differ from other container orchestration platforms?
-- What are the main components of a Kubernetes cluster?
-- What is the role of etcd in a Kubernetes cluster and how it stores configuration data?
-- How do you ensure high availability in a Kubernetes cluster?
+# Kubernetes Interview Questions — organized by topic
 
-## Scaling, Updating and Deployment
+Use these questions to structure study sessions. Grouped from foundational to advanced, they’re suitable for self-study or mock interviews.
 
-- How does Kubernetes handle scaling and rolling updates?
-- What is the difference between a pod and a deployment in Kubernetes?
-- How does Kubernetes handle rolling out updates to an application?
-- How do you handle horizontal and vertical scaling in a Kubernetes cluster?
-- How do you handle version upgrades and updates in a Kubernetes cluster?
-- How do you handle rolling updates and rollbacks in a Kubernetes cluster?
-- How would you handle zero-downtime deployments in a Kubernetes cluster?
-- Can you explain how you would use Kubernetes for canary deployments?
+## Core concepts & architecture
+- What is Kubernetes and which problems does it solve?
+- Describe the control plane components (kube-apiserver, etcd, kube-scheduler, controller-manager) and their responsibilities.
+- What is etcd and why is it critical? How would you back it up and restore it?
+- How does the kube-scheduler make placement decisions?
+- How do you design for control-plane and etcd high availability?
 
-## Networking and Services
+## Pods, controllers & workloads
+- What is a Pod and how does it differ from a container?
+- When to use Deployment, StatefulSet, DaemonSet, Job, and CronJob?
+- How do rolling updates, rollbacks, and rollout strategies work?
+- How do readiness and liveness probes affect rolling updates and traffic?
 
-- How does Kubernetes handle network communication between containers?
-- What are the difference between a service and an ingress in Kubernetes?
-- How does Kubernetes handle service discovery and load balancing?
-- How do you handle network segmentation and security in a Kubernetes cluster?
+## Services, networking & ingress
+- How does Service-based discovery and ClusterIP work?
+- Compare ClusterIP, NodePort, and LoadBalancer service types.
+- What is an Ingress and when would you use it vs a Service?
+- How would you implement network policies to restrict traffic?
 
-## Security, Access Control and Compliance
+## Storage & stateful workloads
+- Explain PersistentVolume (PV) and PersistentVolumeClaim (PVC) lifecycle.
+- How do StatefulSets manage identity and storage persistence?
+- What are StorageClasses and reclaim policies?
 
-- What are some best practices for securing a Kubernetes cluster?
-- How do you handle security and access control in a Kubernetes cluster?
-- How would you set up a multi-tenant Kubernetes cluster?
+## Security & access control
+- Explain RBAC: Roles, ClusterRoles, RoleBindings and ClusterRoleBindings.
+- How do you secure cluster components and kube-apiserver access?
+- Best practices for secrets management and preventing privilege escalation.
 
-## Storage, Persistence and Data Management
+## Observability & troubleshooting
+- How do you collect logs and metrics from Kubernetes workloads?
+- How would you debug a failing Pod or a CrashLoopBackOff?
+- When to use events vs metrics vs tracing for troubleshooting?
 
-- How does Kubernetes handle storage for pods and containers?
-- Can you explain how you would use Kubernetes for stateful applications?
-- How does Kubernetes handle persistent storage for stateful workloads?
-- How do you handle data migration in a Kubernetes cluster?
-- Can you explain the different types of Kubernetes volumes and when they would be used?
+## Scaling, autoscaling & availability
+- How does Horizontal Pod Autoscaler (HPA) work? What metrics can it use?
+- When would you use Vertical Pod Autoscaler (VPA) or Cluster Autoscaler?
+- Strategies for application and cluster high availability.
 
-## Logging, Monitoring and Troubleshooting
+## CI/CD, GitOps & operations
+- How do you integrate Kubernetes with CI/CD pipelines (example patterns)?
+- What is GitOps and how does it help manage clusters?
+- How do you perform safe cluster upgrades and node maintenance?
 
-- How do you handle logging and monitoring in a Kubernetes cluster?
-- How can you troubleshoot a Kubernetes cluster?
-- How do you monitor and troubleshoot a Kubernetes cluster and its resources?
-- Can you discuss how you would approach debugging a Kubernetes application?
+## Advanced & extensibility
+- When to implement a CustomResourceDefinition (CRD) and controller?
+- Design considerations for multi-tenant clusters and resource quotas.
+- Running specialized workloads: stateful databases, ML training, batch jobs — what changes?
 
-## Disaster Recovery, Business Continuity and High Availability
-
-- Can you explain how you would use Kubernetes for disaster recovery and business continuity?
-- How do you handle automatic failover in a Kubernetes cluster?
-- How would you handle disaster recovery and high availability in a Kubernetes cluster?
-
-## Continuous Integration and Delivery
-
-- Can you explain how you would use Kubernetes for continuous integration and delivery?
-- How do you handle secrets and credentials in a Kubernetes cluster?
-
-## Specialized Workloads
-
-- Can you explain how you would use Kubernetes for machine learning workloads?
-- Can you explain how you would use Kubernetes for running big data workloads?
-- Can you explain how you would use Kubernetes for batch processing workloads?
-- How would you use Kubernetes for hybrid cloud deployments?
-
-## Miscellaneous
-
-- Have you ever used Kubernetes in a production environment? If so, can you describe your experience and the challenges you faced?
-- Can you explain the role of Kubernetes controllers and how they work?
-- What is a Kubernetes namespace and when would you use it?
-- How does Kubernetes handle container health checks?
-- How does Kubernetes handle resource allocation and quotas?
-- How does Kubernetes handle autoscaling?
+## Study tips
+- Practice with small labs: deploy an app, add monitoring, break networking, and fix it.
+- Turn questions into hands-on tasks (e.g., implement a canary deploy).
+- Read the API reference and controller docs for deeper understanding.
